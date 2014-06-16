@@ -82,18 +82,17 @@
 npm install
 </pre></td></tr></table></figure>
 
-<h4 id="3-_After_commit_changes_and_deployment,_why_there_is_not_any_change_on_the_page?">3. After commit changes and deployment, why there is not any change on the page?</h4>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre><span class="preprocessor"># Try to run the following command </span>
-<span class="preprocessor"># before hexo g and hexo deploy</span>
-hexo clean
-</pre></td></tr></table></figure><br>####4. How to add Disqus comment to hexo?<br>1. Go to <a href="http://disqus.com/" target="_blank" rel="external">Disqus</a> and sign up.<br>2. Admin -&gt; Settings.<br>Specify your blog info in website name and website URL.<br>3. You can also check your disqus shortname under Site Identity within this page.<br>Specify your shortname in ./_config.yml:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+<h4 id="3-_After_commit_changes_and_deployment,_why_there_is_not_any_change_on_the">3. After commit changes and deployment, why there is not any change on the</h4>
+<h4 id="4-_How_to_add_Disqus_comment_to_hexo?">4. How to add Disqus comment to hexo?</h4>
+<ol>
+<li>Go to <a href="http://disqus.com/" target="_blank" rel="external">Disqus</a> and sign up.  </li>
+<li>Admin -&gt; Settings.<br>Specify your blog info in website name and website URL.  </li>
+<li>You can also check your disqus shortname under Site Identity within this page.<br>Specify your shortname in ./_config.yml:<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="preprocessor"># Disqus</span>
 disqus_shortname: &lt;your-disqus-shourtname&gt;
-</pre></td></tr></table></figure><br>4. Copy the universal code from <a href="https://help.disqus.com/customer/portal/articles/472097-universal-embed-code" target="_blank" rel="external">here</a>.<br>Paste it to ./themes/<your-theme-folder>/layout/_partial/comment.ejs. eg.<br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td></tr></table></figure></li>
+<li>Copy the universal code from <a href="https://help.disqus.com/customer/portal/articles/472097-universal-embed-code" target="_blank" rel="external">here</a>.<br>Paste it to ./themes/<your-theme-folder>/layout/_partial/comment.ejs. eg.<br><figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -129,11 +128,23 @@ disqus_shortname: &lt;your-disqus-shourtname&gt;
 <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://disqus.com"</span> <span class="attribute">class</span>=<span class="value">"dsq-brlink"</span>&gt;</span>blog comments powered by <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"logo-disqus"</span>&gt;</span>Disqus<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
 <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
 <span class="vbscript">&lt;% } %&gt;</span>
-</pre></td></tr></table></figure><br>Be sure to replace example with your forum shortname.<br><br>####5. I have got a domain name from godaddy, how to bind it with github page?<br>1. Under the root of github repo of your hexo, create a new file ‘CNAME’, add the content as<br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td></tr></table></figure><br>Be sure to replace example with your forum shortname.</your-theme-folder></li>
+</ol>
+<h4 id="5-_I_have_got_a_domain_name_from_godaddy,_how_to_bind_it_with_github_page?">5. I have got a domain name from godaddy, how to bind it with github page?</h4>
+<ol>
+<li>Under the root of github repo of your hexo, create a new file ‘CNAME’, add the content as <figure class="highlight"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="tag">&lt;<span class="title">your-dns</span>&gt;</span>
-</pre></td></tr></table></figure><br>2. Copy the ‘CNAME’ file to ./source<br>3. Go to godaddy, My Account -&gt; DOMAINS:<br>under My Domains, click Launch.<br>Domain Details is displyed.<br>Click DNS Zone File.<br>Under A (Host), set your github page IP addr to ‘Points to’. How to check the IP addr of github page?<br><figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td></tr></table></figure></li>
+<li>Copy the ‘CNAME’ file to ./source</li>
+<li>Go to godaddy, My Account -&gt; DOMAINS:<br>under My Domains, click Launch.<br>Domain Details is displyed.<br>Click DNS Zone File.<br>Under A (Host), set your github page IP addr to ‘Points to’. How to check the IP addr of github page?<br><figure class="highlight sh"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre>dig &lt;github-username&gt;<span class="preprocessor">.github</span><span class="preprocessor">.io</span>
-</pre></td></tr></table></figure><br>You can either set the blog as second-level domain.<br>For more inf0, refer to <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages" target="_blank" rel="external">Setting up a custom domain with GitHub Pages</a>.<br><br>####6. How to manage catagories and tags?<br>./.deploy/catagories<br>./.deploy/tags<br>####7. How to set the template of post?<br>./scaffolds/post.md<br>eg.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre>1
+</pre></td></tr></table></figure><br>You can either set the blog as second-level domain.<br>For more inf0, refer to <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages" target="_blank" rel="external">Setting up a custom domain with GitHub Pages</a>.</li>
+</ol>
+<h4 id="6-_How_to_manage_catagories_and_tags?">6. How to manage catagories and tags?</h4>
+<p>./.deploy/catagories<br>./.deploy/tags</p>
+<h4 id="7-_How_to_set_the_template_of_post?">7. How to set the template of post?</h4>
+<p>./scaffolds/post.md<br>eg.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -145,7 +156,7 @@ categories:
 ---</span>
 </pre></td></tr></table></figure>
 
-</your-theme-folder>
+
       
     </div>
     <footer>
