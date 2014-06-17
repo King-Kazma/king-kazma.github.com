@@ -36,12 +36,73 @@
     
       <li><a href="/archives">Archives</a></li>
     
+      <li><a href="">About me</a></li>
+    
   </ul>
   <div class="clearfix"></div>
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-06-17T02:42:41.000Z"><a href="/2014/06/16/Using-Sublime-SFTP-Plugin-and-Work-From-Remote/">Jun 16 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/06/16/Using-Sublime-SFTP-Plugin-and-Work-From-Remote/">Using Sublime SFTP Plugin and Work From Remote</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>[Sublime] is my favorite editor. Sublime does have Linux verison, but it is not compatible to RHEL5.6 on my work desktop. I miss Ubuntu, however, RHEL5.6 is required by the company where I have my intern. Fortunetely, I find a alternate way to use sublime. Instead of coding directly on my work desktop, I can edit source code on my laptop and sync them to the desktop. The solution is <a href="http://wbond.net/sublime_packages/sftp" target="_blank" rel="external">Sublime SFTP</a>.</p>
+<p>Sublime SFTP is a plugin for Sublime which help us sync our local code and remote code. </p>
+<h4 id="1-_Installation_of_Sublime_SFTP">1. Installation of Sublime SFTP</h4>
+<ol>
+<li>The Sublime SFTP could be installed by Package Control. Install it first if you have not done so. </li>
+<li>shift + ctrl + p, type in “pci” to start Package Control. </li>
+<li>Type in “SFTP” and hit enter to install SFTP automatically.</li>
+</ol>
+<h4 id="2-_Setup_server_config">2. Setup server config</h4>
+<p>After Installation, we need to specify the server config. Click File menu and Click SFTP/FTP (It could be also started by shift + ctrl + p, and type in “SFTP”), select Setup Server. A new file will pop up. We can leave most of settings as default. Please set your config to following values:</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="string">"type"</span>: <span class="string">"sftp"</span>, <span class="regexp">//</span> <span class="keyword">or</span> <span class="string">"ftp"</span>, <span class="string">"ftps"</span>
+<span class="string">"sync_up_on_save"</span>: <span class="literal">true</span>, <span class="regexp">//</span> <span class="keyword">this</span> one <span class="keyword">is</span> helpful, the code will be sync to remote                            <span class="regexp">//</span> automatically <span class="literal">on</span> save
+<span class="string">"host"</span>: &lt;your-host&gt;,
+<span class="string">"user"</span>: &lt;your-username&gt;,
+<span class="string">"password"</span>: &lt;your-password&gt;,
+<span class="string">"port"</span>: <span class="number">22</span>, <span class="regexp">//</span> <span class="number">22</span> <span class="keyword">by</span> <span class="reserved">default</span>
+<span class="string">'remote_path'</span>: &lt;root/<span class="keyword">of</span>/your/remote/path&gt;,
+</pre></td></tr></table></figure></p>
+<h4 id="3-_Using_the_same_way,_you_can_also_sync_a_entire_folder">3. Using the same way, you can also sync a entire folder</h4>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
   <article class="post">
   
   <div class="post-content">
@@ -192,6 +253,8 @@ categories:
 <div class="widget tag">
   <h3 class="title">Categories</h3>
   <ul class="entry">
+  
+    <li><a href="/categories/Sublime/">Sublime</a><small>1</small></li>
   
     <li><a href="/categories/hexo/">hexo</a><small>1</small></li>
   
